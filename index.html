@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Entrenamientos y Dietas Personalizadas</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 text-gray-800">
+
+  <!-- Header -->
+  <header class="bg-white shadow-md">
+    <div class="max-w-7xl mx-auto px-4 py-6 flex justify-between items-center">
+      <h1 class="text-2xl font-bold">Tu Plan Fitness</h1>
+      <nav class="space-x-4">
+        <a href="#planes" class="hover:text-blue-600">Planes</a>
+        <a href="#contacto" class="hover:text-blue-600">Contacto</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="text-center py-16 bg-gradient-to-r from-blue-500 to-purple-500 text-white">
+    <h2 class="text-4xl font-extrabold mb-4">Entrenamientos y Dietas Personalizadas</h2>
+    <p class="text-lg mb-6">Desde 1€ hasta 10€, elige el plan que mejor se adapte a ti.</p>
+    <a href="#planes" class="bg-white text-blue-600 px-6 py-3 rounded-full font-semibold">Ver Planes</a>
+  </section>
+
+  <!-- Planes Section -->
+  <section id="planes" class="max-w-7xl mx-auto px-4 py-16">
+    <h3 class="text-3xl font-bold text-center mb-12">Nuestros Planes</h3>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+      <!-- Plan Básico -->
+      <div class="bg-white shadow-lg rounded-lg p-6">
+        <h4 class="text-xl font-bold mb-4">Plan Básico</h4>
+        <p class="mb-4">Rutina o dieta simple personalizada según tus objetivos.</p>
+        <p class="font-bold text-2xl mb-4">1€</p>
+        <a href="#contacto" class="block text-center bg-blue-600 text-white py-2 rounded-lg">Lo Quiero</a>
+      </div>
+
+      <!-- Plan Intermedio -->
+      <div class="bg-white shadow-lg rounded-lg p-6">
+        <h4 class="text-xl font-bold mb-4">Plan Intermedio</h4>
+        <p class="mb-4">Entrenamiento y dieta personalizada con seguimiento semanal.</p>
+        <p class="font-bold text-2xl mb-4">5€</p>
+        <a href="#contacto" class="block text-center bg-blue-600 text-white py-2 rounded-lg">Lo Quiero</a>
+      </div>
+
+      <!-- Plan Premium -->
+      <div class="bg-white shadow-lg rounded-lg p-6">
+        <h4 class="text-xl font-bold mb-4">Plan Premium</h4>
+        <p class="mb-4">Entrenamiento + dieta + seguimiento + asesoría diaria.</p>
+        <p class="font-bold text-2xl mb-4">10€</p>
+        <a href="#contacto" class="block text-center bg-blue-600 text-white py-2 rounded-lg">Lo Quiero</a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Contacto / Formulario -->
+  <section id="contacto" class="bg-gray-200 py-16">
+    <h3 class="text-3xl font-bold text-center mb-8">Contacta para Personalizar tu Plan</h3>
+    <form class="max-w-xl mx-auto bg-white p-8 rounded-lg shadow-lg space-y-4">
+      <input type="text" placeholder="Tu Nombre" class="w-full p-3 border rounded-lg" required>
+      <input type="email" placeholder="Tu Email" class="w-full p-3 border rounded-lg" required>
+      <select class="w-full p-3 border rounded-lg" required>
+        <option value="">Selecciona tu plan</option>
+        <option value="Básico">Plan Básico - 1€</option>
+        <option value="Intermedio">Plan Intermedio - 5€</option>
+        <option value="Premium">Plan Premium - 10€</option>
+      </select>
+      <textarea placeholder="Cuéntame tus objetivos..." class="w-full p-3 border rounded-lg" rows="4"></textarea>
+      <button type="submit" class="w-full bg-blue-600 text-white py-3 rounded-lg font-bold">Enviar Solicitud</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-white text-center py-6">
+    <p>&copy; 2025 Tu Plan Fitness. Todos los derechos reservados.</p>
+    <p>Síguenos en <a href="#" class="underline">Instagram</a> | <a href="#" class="underline">TikTok</a></p>
+  </footer>
+
+</body>
+</html>
