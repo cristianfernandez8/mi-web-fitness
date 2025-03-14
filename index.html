@@ -59,21 +59,21 @@
   </section>
 
   <!-- Contacto / Formulario -->
-  <section id="contacto" class="bg-gray-200 py-16">
+ <section id="contacto" class="bg-gray-200 py-16">
     <h3 class="text-3xl font-bold text-center mb-8">Contacta para Personalizar tu Plan</h3>
-    <form class="max-w-xl mx-auto bg-white p-8 rounded-lg shadow-lg space-y-4">
-      <input type="text" placeholder="Tu Nombre" class="w-full p-3 border rounded-lg" required>
-      <input type="email" placeholder="Tu Email" class="w-full p-3 border rounded-lg" required>
-      <select class="w-full p-3 border rounded-lg" required>
+    <form action="https://formspree.io/f/mldjdewa" method="POST" class="max-w-xl mx-auto bg-white p-8 rounded-lg shadow-lg space-y-4">
+      <input type="text" name="name" placeholder="Tu Nombre" class="w-full p-3 border rounded-lg" required>
+      <input type="email" name="email" placeholder="Tu Email" class="w-full p-3 border rounded-lg" required>
+      <select name="plan" class="w-full p-3 border rounded-lg" required>
         <option value="">Selecciona tu plan</option>
         <option value="Básico">Plan Básico - 1€</option>
         <option value="Intermedio">Plan Intermedio - 5€</option>
         <option value="Premium">Plan Premium - 10€</option>
       </select>
-      <textarea placeholder="Cuéntame tus objetivos..." class="w-full p-3 border rounded-lg" rows="4"></textarea>
+      <textarea name="message" placeholder="Cuéntame tus objetivos..." class="w-full p-3 border rounded-lg" rows="4"></textarea>
       <button type="submit" class="w-full bg-blue-600 text-white py-3 rounded-lg font-bold">Enviar Solicitud</button>
     </form>
-  </section>
+</section>
 
   <!-- Footer -->
   <footer class="bg-gray-800 text-white text-center py-6">
