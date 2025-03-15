@@ -5,111 +5,114 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Planes de Entrenamiento y Dietas Personalizadas</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Poppins', sans-serif; }
+    h1, h2, h3 { font-weight: 700; }
+    p, li { font-family: 'Roboto', sans-serif; }
+  </style>
 </head>
 <body class="bg-gray-100">
 
   <!-- SECCIÓN BIENVENIDA -->
   <section id="inicio" class="text-center py-16 bg-blue-600 text-white">
-    <h1 class="text-5xl font-bold mb-4">Transforma tu vida con planes personalizados</h1>
-    <p class="text-xl">Elige entre entrenamientos y dietas diseñadas especialmente para ti</p>
+    <h1 class="text-5xl mb-4">💪 Transforma tu vida con planes personalizados</h1>
+    <p class="text-2xl">Elige tu entrenamiento y dieta a medida</p>
   </section>
 
-  <!-- RESUMEN DE LOS PLANES -->
-  <section id="resumen-planes" class="py-16 bg-gray-100">
-    <h2 class="text-4xl font-bold text-center mb-10">¿Qué incluye cada plan?</h2>
-    <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
-      <div class="bg-white p-6 rounded-lg shadow-lg">
-        <h3 class="text-2xl font-semibold mb-4">Plan Básico (1€)</h3>
-        <ul class="list-disc pl-5 space-y-2">
-          <li>Entrenamiento general para principiantes</li>
-          <li>Dieta saludable genérica</li>
-          <li>Recomendaciones semanales</li>
-          <li>Acceso al grupo básico de soporte</li>
+  <!-- RESUMEN DE PLANES -->
+  <section id="resumen-planes" class="py-16">
+    <h2 class="text-4xl text-center mb-12">Nuestros Planes</h2>
+    <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 px-4">
+      
+      <!-- Plan Básico -->
+      <div class="bg-white p-6 rounded-lg shadow-lg text-center space-y-4">
+        <h3 class="text-2xl">Plan Básico - 1€</h3>
+        <p>Ideal para empezar con rutinas y dietas generales.</p>
+        <ul class="text-left list-disc pl-5 space-y-2">
+          <li>Entrenamiento cuerpo completo (3 días)</li>
+          <li>Estiramientos y guía en casa</li>
+          <li>Dieta genérica 1500 kcal</li>
+          <li>Acceso grupo básico</li>
         </ul>
+        <a href="#contacto" class="block bg-blue-500 text-white py-2 rounded-lg">Solicitar Plan Básico</a>
       </div>
-      <div class="bg-white p-6 rounded-lg shadow-lg">
-        <h3 class="text-2xl font-semibold mb-4">Plan Intermedio (5€)</h3>
-        <ul class="list-disc pl-5 space-y-2">
-          <li>3 entrenamientos personalizados por semana</li>
-          <li>Dieta personalizada según tus objetivos</li>
-          <li>Asesoría por email 1 vez al mes</li>
-          <li>Acceso a grupo privado intermedio</li>
+
+      <!-- Plan Intermedio -->
+      <div class="bg-white p-6 rounded-lg shadow-lg text-center space-y-4">
+        <h3 class="text-2xl">Plan Intermedio - 5€</h3>
+        <p>Para quienes quieren ir al siguiente nivel.</p>
+        <ul class="text-left list-disc pl-5 space-y-2">
+          <li>Rutina fuerza (3 días)</li>
+          <li>HIIT 20 min</li>
+          <li>Dieta tonificación o volumen</li>
+          <li>Asesoría mensual</li>
         </ul>
+        <a href="#contacto" class="block bg-green-500 text-white py-2 rounded-lg">Solicitar Plan Intermedio</a>
       </div>
-      <div class="bg-white p-6 rounded-lg shadow-lg">
-        <h3 class="text-2xl font-semibold mb-4">Plan Premium (10€)</h3>
-        <ul class="list-disc pl-5 space-y-2">
-          <li>Entrenamientos 100% personalizados</li>
-          <li>Dieta hecha a medida y seguimiento semanal</li>
-          <li>Asesoramiento privado por WhatsApp</li>
+
+      <!-- Plan Premium -->
+      <div class="bg-white p-6 rounded-lg shadow-lg text-center space-y-4">
+        <h3 class="text-2xl">Plan Premium - 10€</h3>
+        <p>Máxima personalización y seguimiento directo.</p>
+        <ul class="text-left list-disc pl-5 space-y-2">
+          <li>Entrenamiento 100% a medida</li>
+          <li>Dieta personalizada y seguimiento</li>
+          <li>Contacto directo WhatsApp</li>
           <li>Revisiones semanales</li>
         </ul>
+        <a href="#contacto" class="block bg-red-500 text-white py-2 rounded-lg">Solicitar Plan Premium</a>
       </div>
+
     </div>
   </section>
 
-  <!-- PLAN BÁSICO -->
-  <section id="plan-basico" class="py-16 bg-white">
-    <h2 class="text-3xl font-bold text-center mb-8">Plan Básico - 1€</h2>
-    <h3 class="text-2xl font-semibold mb-4">Entrenamientos:</h3>
-    <ul class="list-disc pl-5 space-y-2 mb-8">
-      <li>Rutina cuerpo completo (3 días/semana)</li>
-      <li>Estiramientos básicos</li>
-      <li>Guía para entrenar en casa</li>
-    </ul>
-    <h3 class="text-2xl font-semibold mb-4">Dieta:</h3>
-    <ul class="list-disc pl-5 space-y-2">
-      <li>Menú semanal saludable (1500 kcal)</li>
-      <li>Recetas fáciles y económicas</li>
-      <li>Consejos básicos de nutrición</li>
-    </ul>
+  <!-- SECCIÓN DETALLADA -->
+  <section id="detalle" class="py-16 bg-gray-200">
+    <h2 class="text-4xl text-center mb-12">Detalles de cada Plan</h2>
+
+    <!-- Entrenamientos y dietas -->
+    <div class="max-w-5xl mx-auto space-y-12 px-6">
+      
+      <!-- Básico -->
+      <div>
+        <h3 class="text-3xl text-center mb-4">Plan Básico</h3>
+        <p class="text-center">Perfecto para empezar con lo esencial</p>
+        <ul class="list-disc pl-8 space-y-2">
+          <li>Entrenamientos: 3 días/semana, ejercicios en casa.</li>
+          <li>Dietas: Menús básicos para pérdida de peso o tonificación ligera.</li>
+        </ul>
+      </div>
+
+      <!-- Intermedio -->
+      <div>
+        <h3 class="text-3xl text-center mb-4">Plan Intermedio</h3>
+        <p class="text-center">Sube de nivel y maximiza resultados.</p>
+        <ul class="list-disc pl-8 space-y-2">
+          <li>Entrenamientos: Rutinas divididas (pecho, pierna, espalda), HIIT.</li>
+          <li>Dietas: Tonificación o volumen según objetivos.</li>
+          <li>Suplementos recomendados (opcional).</li>
+        </ul>
+      </div>
+
+      <!-- Premium -->
+      <div>
+        <h3 class="text-3xl text-center mb-4">Plan Premium</h3>
+        <p class="text-center">Tu cuerpo al siguiente nivel con apoyo directo.</p>
+        <ul class="list-disc pl-8 space-y-2">
+          <li>Entrenamientos personalizados cada semana.</li>
+          <li>Dietas ajustadas a macros exactos.</li>
+          <li>Seguimiento directo y asesoría continua.</li>
+        </ul>
+      </div>
+
+    </div>
   </section>
 
-  <!-- PLAN INTERMEDIO -->
-  <section id="plan-intermedio" class="py-16 bg-gray-100">
-    <h2 class="text-3xl font-bold text-center mb-8">Plan Intermedio - 5€</h2>
-    <h3 class="text-2xl font-semibold mb-4">Entrenamientos:</h3>
-    <ul class="list-disc pl-5 space-y-2 mb-8">
-      <li>Rutina fuerza (3 días/semana)</li>
-      <li>HIIT 20 minutos</li>
-      <li>Tonificación glúteos, abdomen y brazos</li>
-    </ul>
-    <h3 class="text-2xl font-semibold mb-4">Dietas:</h3>
-    <ul class="list-disc pl-5 space-y-2">
-      <li>Dieta tonificación (1800 kcal)</li>
-      <li>Dieta ganar músculo (2200 kcal)</li>
-      <li>Consejos de suplementos (opcional)</li>
-    </ul>
-  </section>
-
-  <!-- PLAN PREMIUM -->
-  <section id="plan-premium" class="py-16 bg-white">
-    <h2 class="text-3xl font-bold text-center mb-8">Plan Premium - 10€</h2>
-    <h3 class="text-2xl font-semibold mb-4">Entrenamientos personalizados:</h3>
-    <ul class="list-disc pl-5 space-y-2 mb-8">
-      <li>Pérdida de peso personalizada</li>
-      <li>Hipertrofia avanzada</li>
-      <li>Definición muscular</li>
-      <li>Especial glúteos y abdomen</li>
-    </ul>
-    <h3 class="text-2xl font-semibold mb-4">Dietas personalizadas:</h3>
-    <ul class="list-disc pl-5 space-y-2 mb-8">
-      <li>Adaptada a tus macros</li>
-      <li>Seguimiento semanal</li>
-      <li>Opciones veganas, vegetarianas</li>
-    </ul>
-    <h3 class="text-2xl font-semibold mb-4">Extras:</h3>
-    <ul class="list-disc pl-5 space-y-2">
-      <li>Contacto privado por WhatsApp</li>
-      <li>Consultas semanales conmigo (Cristian)</li>
-      <li>Guía avanzada de suplementos</li>
-    </ul>
-  </section>
-
-  <!-- SECCIÓN CONTACTO -->
-  <section id="contacto" class="bg-gray-200 py-16">
-    <h3 class="text-3xl font-bold text-center mb-8">Contacta para Personalizar tu Plan</h3>
-    <form action="https://formspree.io/f/mldjdewa" method="POST" class="max-w-xl mx-auto bg-white p-8 rounded-lg shadow-lg space-y-4">
+  <!-- FORMULARIO CONTACTO -->
+  <section id="contacto" class="py-16 bg-white">
+    <h3 class="text-4xl text-center mb-8">💬 Contacta para Personalizar tu Plan</h3>
+    <form action="https://formspree.io/f/mldjdewa" method="POST" class="max-w-xl mx-auto bg-gray-100 p-8 rounded-lg shadow-lg space-y-4">
       <input type="text" name="nombre" placeholder="Tu Nombre" class="w-full p-3 border rounded-lg" required>
       <input type="email" name="email" placeholder="Tu Email" class="w-full p-3 border rounded-lg" required>
       <select name="plan" class="w-full p-3 border rounded-lg" required>
