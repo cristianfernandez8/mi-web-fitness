@@ -3,36 +3,37 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Planes de Entrenamiento y Dietas Personalizadas</title>
+  <title>Planes de Entrenamiento y Dieta Personalizados</title>
   <script src="https://cdn.tailwindcss.com"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
-  <style>
-    body { font-family: 'Poppins', sans-serif; }
-    h1, h2, h3 { font-weight: 700; }
-    p, li { font-family: 'Roboto', sans-serif; }
-  </style>
 </head>
 <body class="bg-gray-100">
 
-  <!-- SECCIÓN BIENVENIDA -->
-  <section id="inicio" class="text-center py-16 bg-blue-600 text-white">
-    <h1 class="text-5xl mb-4">💪 Transforma tu vida con planes personalizados</h1>
-    <p class="text-2xl">Elige tu entrenamiento y dieta a medida</p>
-  </section>
+  <!-- HEADER -->
+  <header class="bg-blue-600 text-white py-6 text-center">
+    <h1 class="text-4xl font-bold">Planes Personalizados de Entrenamiento y Dieta</h1>
+    <p class="text-lg">Elige tu plan ideal para alcanzar tus objetivos</p>
+  </header>
 
-  <!-- SECCIÓN PLANES -->
+  <!-- PLANES DETALLADOS -->
   <section id="planes" class="py-16">
-    <h2 class="text-4xl text-center mb-12">Nuestros Planes</h2>
+    <h2 class="text-4xl text-center mb-12">Nuestros Planes Detallados</h2>
     <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 px-4">
 
       <!-- Plan Básico -->
       <div class="bg-white p-8 rounded-lg shadow-lg text-center space-y-4">
         <h3 class="text-3xl">Plan Básico - 1€</h3>
-        <p>Rutinas simples y dieta base para comenzar.</p>
-        <ul class="list-disc list-inside space-y-2 text-left mx-auto w-3/4">
-          <li>Entrenamiento completo 3 días</li>
-          <li>Dieta genérica 1500 kcal</li>
-          <li>Guía de estiramientos</li>
+        <p>Ideal para empezar desde cero.</p>
+        <h4 class="text-xl font-bold mt-4">Entrenamiento (3 días)</h4>
+        <ul class="list-disc list-inside text-left mx-auto w-4/5 space-y-2">
+          <li><strong>Día 1:</strong> Pecho y Tríceps: Flexiones 3x12, Press banca 3x12, Fondos 3x8</li>
+          <li><strong>Día 2:</strong> Piernas: Sentadillas 3x15, Zancadas 3x12, Gemelos 3x20</li>
+          <li><strong>Día 3:</strong> Espalda y Bíceps: Remo 3x12, Dominadas 3x6, Curl bíceps 3x15</li>
+        </ul>
+        <h4 class="text-xl font-bold mt-4">Dieta (1500-1800 kcal)</h4>
+        <ul class="list-disc list-inside text-left mx-auto w-4/5 space-y-2">
+          <li><strong>Definición:</strong> Alta en proteínas, baja en carbohidratos.</li>
+          <li><strong>Volumen:</strong> Añade 100g arroz o pasta en comidas.</li>
+          <li><strong>Ejemplo:</strong> Avena + Yogur, Pollo + Verduras, Tortilla de 3 huevos.</li>
         </ul>
         <a href="https://www.paypal.com/paypalme/tuusuario/1" target="_blank" class="block bg-blue-500 text-white py-3 rounded-lg font-bold">Comprar Plan Básico</a>
       </div>
@@ -40,11 +41,19 @@
       <!-- Plan Intermedio -->
       <div class="bg-white p-8 rounded-lg shadow-lg text-center space-y-4">
         <h3 class="text-3xl">Plan Intermedio - 5€</h3>
-        <p>Rutinas específicas y dieta ajustada a tu objetivo.</p>
-        <ul class="list-disc list-inside space-y-2 text-left mx-auto w-3/4">
-          <li>Rutinas fuerza/HIIT 3 días</li>
-          <li>Dieta tonificación o volumen</li>
-          <li>Asesoría mensual</li>
+        <p>Perfecto para mejorar fuerza y tonificar.</p>
+        <h4 class="text-xl font-bold mt-4">Entrenamiento (4 días)</h4>
+        <ul class="list-disc list-inside text-left mx-auto w-4/5 space-y-2">
+          <li><strong>Día 1:</strong> Full Body (Peso corporal y mancuernas)</li>
+          <li><strong>Día 2:</strong> HIIT + Core</li>
+          <li><strong>Día 3:</strong> Tren superior (Espalda, Hombros, Brazos)</li>
+          <li><strong>Día 4:</strong> Tren inferior (Glúteos, Piernas)</li>
+        </ul>
+        <h4 class="text-xl font-bold mt-4">Dieta (1800-2200 kcal)</h4>
+        <ul class="list-disc list-inside text-left mx-auto w-4/5 space-y-2">
+          <li><strong>Definición:</strong> 40% Proteínas, 30% Carbohidratos, 30% Grasas.</li>
+          <li><strong>Volumen:</strong> 40% Carbohidratos, 30% Proteínas, 30% Grasas.</li>
+          <li><strong>Ejemplo:</strong> Tortilla + Avena, Pollo + Arroz integral, Pescado + Verduras.</li>
         </ul>
         <a href="https://www.paypal.com/paypalme/tuusuario/5" target="_blank" class="block bg-green-500 text-white py-3 rounded-lg font-bold">Comprar Plan Intermedio</a>
       </div>
@@ -52,11 +61,18 @@
       <!-- Plan Premium -->
       <div class="bg-white p-8 rounded-lg shadow-lg text-center space-y-4">
         <h3 class="text-3xl">Plan Premium - 10€</h3>
-        <p>Plan completo con seguimiento personalizado.</p>
-        <ul class="list-disc list-inside space-y-2 text-left mx-auto w-3/4">
-          <li>Entrenamiento a medida</li>
-          <li>Dieta personalizada</li>
-          <li>Revisión y contacto semanal</li>
+        <p>Máxima personalización + seguimiento semanal.</p>
+        <h4 class="text-xl font-bold mt-4">Entrenamiento (5-6 días personalizado)</h4>
+        <ul class="list-disc list-inside text-left mx-auto w-4/5 space-y-2">
+          <li>Rutina adaptada a tu nivel (pesas, cardio, fuerza, definición o volumen).</li>
+          <li>Opción: Rutinas en casa o gimnasio completo.</li>
+          <li>Incluye seguimiento y ajustes semanales.</li>
+        </ul>
+        <h4 class="text-xl font-bold mt-4">Dieta Personalizada</h4>
+        <ul class="list-disc list-inside text-left mx-auto w-4/5 space-y-2">
+          <li><strong>Pérdida de peso:</strong> Baja en carbohidratos, alta proteína.</li>
+          <li><strong>Volumen muscular:</strong> Rica en carbohidratos y proteínas de calidad.</li>
+          <li><strong>Opciones Veganas/Vegetarianas.</strong></li>
         </ul>
         <a href="https://www.paypal.com/paypalme/tuusuario/10" target="_blank" class="block bg-red-500 text-white py-3 rounded-lg font-bold">Comprar Plan Premium</a>
       </div>
@@ -64,46 +80,21 @@
     </div>
   </section>
 
-  <!-- SECCIÓN DETALLES -->
-  <section id="detalles" class="py-16 bg-gray-200">
-    <h2 class="text-4xl text-center mb-12">Detalles completos</h2>
-
-    <div class="max-w-5xl mx-auto space-y-16 text-center">
-
-      <!-- Detalle Básico -->
-      <div>
-        <h3 class="text-3xl mb-4">Plan Básico</h3>
-        <p class="mb-2">✔️ Ideal para principiantes que quieren empezar poco a poco.</p>
-        <p class="mb-2">✔️ Dieta equilibrada y rutinas fáciles de seguir.</p>
-      </div>
-
-      <!-- Detalle Intermedio -->
-      <div>
-        <h3 class="text-3xl mb-4">Plan Intermedio</h3>
-        <p class="mb-2">🔥 Para quienes buscan mejorar fuerza y resistencia.</p>
-        <p class="mb-2">💥 Incluye HIIT y dieta ajustada a objetivos.</p>
-      </div>
-
-      <!-- Detalle Premium -->
-      <div>
-        <h3 class="text-3xl mb-4">Plan Premium</h3>
-        <p class="mb-2">🏆 Personalización total: entreno, dieta y asesoramiento directo.</p>
-        <p class="mb-2">💎 Ideal para cambios físicos importantes y seguimiento semanal.</p>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- FORMULARIO CONTACTO -->
-  <section id="contacto" class="py-16 bg-white">
-    <h3 class="text-4xl text-center mb-8">💬 Contacta para dudas o personalización</h3>
-    <form action="https://formspree.io/f/mldjdewa" method="POST" class="max-w-xl mx-auto bg-gray-100 p-8 rounded-lg shadow-lg space-y-4">
+  <!-- SECCIÓN CONTACTO -->
+  <section id="contacto" class="bg-gray-200 py-16">
+    <h3 class="text-3xl font-bold text-center mb-8">Contacta para Personalizar tu Plan</h3>
+    <form action="https://formspree.io/f/mldjdewa" method="POST" class="max-w-xl mx-auto bg-white p-8 rounded-lg shadow-lg space-y-4">
       <input type="text" name="nombre" placeholder="Tu Nombre" class="w-full p-3 border rounded-lg" required>
       <input type="email" name="email" placeholder="Tu Email" class="w-full p-3 border rounded-lg" required>
-      <textarea name="mensaje" placeholder="Cuéntame tus dudas u objetivos..." class="w-full p-3 border rounded-lg" rows="4"></textarea>
-      <button type="submit" class="w-full bg-blue-600 text-white py-3 rounded-lg font-bold">Enviar Mensaje</button>
+      <textarea name="mensaje" placeholder="Cuéntame tus objetivos..." class="w-full p-3 border rounded-lg" rows="4"></textarea>
+      <button type="submit" class="w-full bg-blue-600 text-white py-3 rounded-lg font-bold">Enviar Solicitud</button>
     </form>
   </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-gray-800 text-white text-center py-6">
+    <p>&copy; 2024 Cristian Fitness. Todos los derechos reservados.</p>
+  </footer>
 
 </body>
 </html>
