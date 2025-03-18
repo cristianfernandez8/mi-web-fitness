@@ -25,11 +25,12 @@
 
         /* Header */
         header {
-            background: linear-gradient(90deg, #ff4c97, #ff6f61);
+            background: linear-gradient(90deg, #ff4c97, #ff6f61, #ff8c00);
             padding: 80px 0;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
             text-align: center;
             color: white;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
         }
 
         header h1 {
@@ -55,6 +56,11 @@
             box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
             padding: 60px 40px;
             text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .section:hover {
+            transform: scale(1.02);
         }
 
         /* Títulos de Sección */
@@ -89,7 +95,7 @@
 
         .plan-card:hover {
             transform: translateY(-10px);
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
         }
 
         .plan-title {
@@ -190,6 +196,55 @@
             border-radius: 10px;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
         }
+
+        /* Animación de entrada */
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .animate {
+            animation: fadeIn 1s ease-out;
+        }
+
+        /* Estilo de estadísticas */
+        .stats {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .stat-card {
+            background-color: #ff6f61;
+            color: white;
+            padding: 30px;
+            text-align: center;
+            border-radius: 10px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+            width: 150px;
+            transition: transform 0.3s;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .stat-title {
+            font-size: 24px;
+            font-weight: 600;
+        }
+
+        .stat-number {
+            font-size: 32px;
+            font-weight: bold;
+        }
     </style>
 </head>
 <body>
@@ -199,80 +254,7 @@
 
     <div class="container">
         <!-- Sección sobre el servicio -->
-        <section class="section">
+        <section class="section animate">
             <h2>¿Qué es el Fitness y el Ejercicio?</h2>
             <p>El fitness se refiere a un estado óptimo de salud y bienestar físico. Se consigue a través de una combinación de ejercicio regular, nutrición adecuada y descanso. El ejercicio no solo mejora tu aspecto físico, sino que también fortalece el sistema cardiovascular, aumenta la resistencia y mejora la flexibilidad.</p>
-            <p>El ejercicio regular es vital para prevenir enfermedades crónicas como la diabetes, enfermedades del corazón y problemas de salud mental. Las actividades físicas también liberan endorfinas, lo que ayuda a reducir el estrés y mejorar el estado de ánimo. Incorporar una rutina de entrenamiento personalizada es clave para lograr un cuerpo sano y una mente tranquila.</p>
-        </section>
-
-        <!-- Sección sobre planes disponibles -->
-        <section class="section">
-            <h2>Planes Disponibles</h2>
-            <div class="plans">
-                <!-- Plan Básico -->
-                <div class="plan-card">
-                    <div class="plan-title">Plan Básico</div>
-                    <div class="plan-price">1€</div>
-                    <div class="plan-details">
-                        ✔ Rutina de entrenamiento genérica adaptada a tu nivel<br>
-                        ✔ Dieta equilibrada estándar para una alimentación sana<br>
-                        ✔ Soporte por correo electrónico para dudas y sugerencias
-                    </div>
-                    <a href="https://www.paypal.com/checkoutnow?token=PAYMENT_LINK_HERE" class="btn">Elegir Plan</a>
-                </div>
-
-                <!-- Plan Intermedio -->
-                <div class="plan-card">
-                    <div class="plan-title">Plan Intermedio</div>
-                    <div class="plan-price">5€</div>
-                    <div class="plan-details">
-                        ✔ Rutina de entrenamiento personalizada según tus metas<br>
-                        ✔ Dieta adaptada a tu metabolismo y objetivos<br>
-                        ✔ Seguimiento cada 15 días para ajustar y mejorar<br>
-                        ✔ Consejos de suplementación según tus necesidades
-                    </div>
-                    <a href="https://www.paypal.com/checkoutnow?token=PAYMENT_LINK_HERE" class="btn">Elegir Plan</a>
-                </div>
-
-                <!-- Plan Premium -->
-                <div class="plan-card">
-                    <div class="plan-title">Plan Premium</div>
-                    <div class="plan-price">10€</div>
-                    <div class="plan-details">
-                        ✔ Entrenamiento completamente personalizado y ajustado a tus necesidades<br>
-                        ✔ Dieta 100% ajustada a tus necesidades y preferencias<br>
-                        ✔ Seguimiento semanal para optimizar resultados<br>
-                        ✔ Consultas ilimitadas y acceso a asesoramiento continuo<br>
-                        ✔ Plan de suplementación avanzado para maximizar tu rendimiento
-                    </div>
-                    <a href="https://www.paypal.com/checkoutnow?token=PAYMENT_LINK_HERE" class="btn">Elegir Plan</a>
-                </div>
-            </div>
-        </section>
-
-        <!-- Sección sobre la importancia de la dieta -->
-        <section class="section info-bg">
-            <h2 class="highlight">La Importancia de una Buena Dieta</h2>
-            <p>Una buena dieta es fundamental para alcanzar y mantener tu objetivo físico. No se trata solo de perder peso, sino de proporcionar a tu cuerpo la energía necesaria para rendir al máximo en tus entrenamientos y tener una vida activa. Comer de manera saludable y balanceada ayuda a prevenir enfermedades, aumenta el metabolismo y mejora el sistema inmunológico.</p>
-            <p>Tu dieta debe incluir todos los nutrientes esenciales: carbohidratos, proteínas, grasas saludables, vitaminas y minerales. Estos nutrientes trabajan en conjunto para ayudarte a mantener un buen nivel de energía, mejorar tu rendimiento en el entrenamiento, y recuperar correctamente después del esfuerzo físico.</p>
-        </section>
-
-        <!-- Formulario de contacto -->
-        <section class="section" id="contacto">
-            <h2>Personaliza tu Plan</h2>
-            <form action="https://formspree.io/f/mldjdewa" method="POST">
-                <input type="text" name="nombre" placeholder="Tu Nombre" required>
-                <input type="email" name="email" placeholder="Tu Email" required>
-                <select name="plan" required>
-                    <option value="">Selecciona tu plan</option>
-                    <option value="Básico">Plan Básico - 1€</option>
-                    <option value="Intermedio">Plan Intermedio - 5€</option>
-                    <option value="Premium">Plan Premium - 10€</option>
-                </select>
-                <textarea name="objetivos" placeholder="Cuéntame tus objetivos..." rows="4"></textarea>
-                <button type="submit">Enviar Solicitud</button>
-            </form>
-        </section>
-    </div>
-</body>
-</html>
+         
