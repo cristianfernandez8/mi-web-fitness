@@ -14,7 +14,7 @@
 
         body {
             font-family: 'Helvetica Neue', Arial, sans-serif;
-            background-color: #f4f4f4;
+            background-color: #f7f7f7;
             color: #333;
             line-height: 1.6;
         }
@@ -25,8 +25,8 @@
 
         /* Header */
         header {
-            background-color: #ffffff;
-            padding: 60px 0;
+            background-color: #f8f8f8;
+            padding: 80px 0;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
             text-align: center;
         }
@@ -43,7 +43,7 @@
             width: 90%;
             max-width: 1200px;
             margin: auto;
-            padding-top: 50px;
+            padding-top: 60px;
         }
 
         /* Secciones */
@@ -60,7 +60,13 @@
         .section h2 {
             font-size: 36px;
             color: #333;
-            margin-bottom: 20px;
+            margin-bottom: 30px;
+        }
+
+        .section p {
+            font-size: 18px;
+            color: #666;
+            line-height: 1.8;
         }
 
         /* Planes de Entrenamiento */
@@ -172,6 +178,17 @@
             transform: scale(1.05);
         }
 
+        /* Nuevos colores y detalles */
+        .highlight {
+            color: #ff6f61; /* Color naranja suave */
+        }
+
+        .info-bg {
+            background-color: #fafafa;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
     </style>
 </head>
 <body>
@@ -180,14 +197,18 @@
     </header>
 
     <div class="container">
+        <!-- Sección sobre el servicio -->
         <section class="section">
-            <h2>Sobre el Servicio</h2>
-            <p style="font-size: 20px; color: #666;">Ofrecemos planes personalizados de entrenamiento y nutrición diseñados para ayudarte a alcanzar tus objetivos de forma eficiente, segura y rápida. Ya sea para perder peso, ganar músculo o mejorar tu bienestar general, tenemos un plan adaptado para ti.</p>
+            <h2>¿Qué es el Fitness y el Ejercicio?</h2>
+            <p>El fitness es el estado físico y mental óptimo que se logra a través de una combinación adecuada de ejercicio, nutrición y descanso. El ejercicio regular fortalece el cuerpo, mejora la circulación sanguínea, y aumenta la flexibilidad. La actividad física, combinada con una dieta balanceada, puede prevenir enfermedades y aumentar la longevidad.</p>
+            <p>Al incorporar el ejercicio en tu rutina, mejorarás tu salud cardiovascular, aumentarás tu fuerza muscular y liberarás endorfinas, las cuales son hormonas que te harán sentir bien. Una rutina constante de entrenamiento también aumenta tu autoestima, reduce el estrés y mejora la calidad de vida.</p>
         </section>
 
+        <!-- Sección sobre planes disponibles -->
         <section class="section">
             <h2>Planes Disponibles</h2>
             <div class="plans">
+                <!-- Plan Básico -->
                 <div class="plan-card">
                     <div class="plan-title">Plan Básico</div>
                     <div class="plan-price">1€</div>
@@ -199,6 +220,7 @@
                     <a href="https://www.paypal.com/checkoutnow?token=PAYMENT_LINK_HERE" class="btn">Elegir Plan</a>
                 </div>
 
+                <!-- Plan Intermedio -->
                 <div class="plan-card">
                     <div class="plan-title">Plan Intermedio</div>
                     <div class="plan-price">5€</div>
@@ -211,6 +233,7 @@
                     <a href="https://www.paypal.com/checkoutnow?token=PAYMENT_LINK_HERE" class="btn">Elegir Plan</a>
                 </div>
 
+                <!-- Plan Premium -->
                 <div class="plan-card">
                     <div class="plan-title">Plan Premium</div>
                     <div class="plan-price">10€</div>
@@ -226,6 +249,14 @@
             </div>
         </section>
 
+        <!-- Sección sobre la importancia de la dieta -->
+        <section class="section info-bg">
+            <h2 class="highlight">¿Por qué es importante una Buena Dieta?</h2>
+            <p>Una dieta adecuada es esencial para maximizar los resultados del ejercicio y alcanzar tus objetivos de forma saludable. Comer los alimentos correctos te proporciona la energía necesaria para tus entrenamientos, mejora tu recuperación y te ayuda a mantener un peso saludable.</p>
+            <p>Una buena dieta debe incluir una mezcla balanceada de carbohidratos, proteínas, grasas saludables, vitaminas y minerales. Evitar alimentos ultraprocesados, azúcares añadidos y grasas trans es crucial para mantener una salud óptima y un rendimiento físico adecuado.</p>
+        </section>
+
+        <!-- Formulario de contacto -->
         <section class="section" id="contacto">
             <h2>Personaliza tu Plan</h2>
             <form action="https://formspree.io/f/mldjdewa" method="POST">
