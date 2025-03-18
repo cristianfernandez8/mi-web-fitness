@@ -5,150 +5,186 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Planes de Entrenamiento y Dietas Personalizadas</title>
     <style>
-        /* Global Styles */
-        body {
-            font-family: 'Poppins', sans-serif;
+        /* Estilos Globales */
+        * {
             margin: 0;
             padding: 0;
-            background-color: #f1f1f1;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            background-color: #f4f4f4;
             color: #333;
-            text-align: center;
             line-height: 1.6;
         }
-        h2 {
-            font-size: 36px;
+
+        h1, h2, h3 {
             font-weight: 600;
+        }
+
+        /* Header */
+        header {
+            background-color: #ffffff;
+            padding: 60px 0;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 48px;
+            color: #333;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        /* Container Principal */
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: auto;
+            padding-top: 50px;
+        }
+
+        /* Secciones */
+        .section {
+            background-color: #ffffff;
+            margin-bottom: 40px;
+            border-radius: 20px;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+            padding: 60px 40px;
+            text-align: center;
+        }
+
+        /* Títulos de Sección */
+        .section h2 {
+            font-size: 36px;
             color: #333;
             margin-bottom: 20px;
         }
-        .container {
-            width: 80%;
-            margin: auto;
-            padding: 50px 0;
-        }
-        header {
-            background: linear-gradient(90deg, #0073e6, #00aaff);
-            color: white;
-            padding: 50px 0;
-            font-size: 48px;
-            font-weight: bold;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-        }
-        .section {
-            background: white;
-            margin: 40px 0;
-            padding: 40px 20px;
-            border-radius: 20px;
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
-            transition: box-shadow 0.3s ease;
-        }
-        .section:hover {
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
-        }
 
-        /* Button Styles */
-        .btn {
-            display: inline-block;
-            padding: 16px 32px;
-            margin: 20px 0;
-            background: #0073e6;
-            color: white;
-            text-decoration: none;
-            border-radius: 50px;
-            font-size: 24px;
-            transition: background 0.3s ease, transform 0.3s ease;
-            cursor: pointer;
-        }
-        .btn:hover {
-            background: #005bb5;
-            transform: scale(1.05);
-        }
-
-        /* Plans Section */
+        /* Planes de Entrenamiento */
         .plans {
-            display: flex;
-            justify-content: center;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 40px;
-            flex-wrap: wrap;
             margin-top: 20px;
         }
+
         .plan-card {
-            background: #fff;
+            background-color: #ffffff;
             border-radius: 20px;
             padding: 30px;
-            width: 320px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            text-align: center;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
         }
+
         .plan-card:hover {
             transform: translateY(-10px);
-            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
         }
+
         .plan-title {
-            font-size: 32px;
-            font-weight: bold;
-            margin-bottom: 10px;
-        }
-        .plan-price {
             font-size: 28px;
-            color: #0073e6;
+            font-weight: 700;
             margin-bottom: 15px;
         }
+
+        .plan-price {
+            font-size: 32px;
+            color: #0073e6;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
         .plan-details {
             font-size: 18px;
             color: #666;
-            line-height: 1.8;
             margin-bottom: 20px;
+            line-height: 1.6;
         }
 
-        /* Contact Section */
-        #contacto form {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            margin-top: 20px;
+        .btn {
+            padding: 16px 32px;
+            background-color: #0073e6;
+            color: #fff;
+            font-size: 18px;
+            border-radius: 50px;
+            text-decoration: none;
+            letter-spacing: 1px;
+            transition: background-color 0.3s, transform 0.3s;
         }
+
+        .btn:hover {
+            background-color: #005bb5;
+            transform: scale(1.05);
+        }
+
+        /* Formulario de Contacto */
+        #contacto {
+            background-color: #ffffff;
+            padding: 60px 40px;
+            border-radius: 20px;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        #contacto h2 {
+            font-size: 36px;
+            color: #333;
+            margin-bottom: 30px;
+        }
+
+        #contacto form {
+            display: grid;
+            gap: 20px;
+            justify-items: center;
+        }
+
         #contacto input, #contacto select, #contacto textarea {
             width: 100%;
             max-width: 500px;
             padding: 15px;
-            margin: 10px 0;
             font-size: 18px;
             border: 1px solid #ddd;
             border-radius: 10px;
-            box-sizing: border-box;
             transition: border-color 0.3s ease;
         }
+
         #contacto input:focus, #contacto select:focus, #contacto textarea:focus {
             border-color: #0073e6;
             outline: none;
         }
+
         #contacto button {
             padding: 15px 40px;
-            background: #0073e6;
+            background-color: #0073e6;
             color: white;
             font-size: 20px;
             border-radius: 50px;
             border: none;
             cursor: pointer;
-            transition: background 0.3s ease, transform 0.3s ease;
+            transition: background-color 0.3s, transform 0.3s;
         }
+
         #contacto button:hover {
-            background: #005bb5;
+            background-color: #005bb5;
             transform: scale(1.05);
         }
+
     </style>
 </head>
 <body>
     <header>
-        Planes de Entrenamiento y Dietas Personalizadas
+        <h1>Planes de Entrenamiento y Dietas Personalizadas</h1>
     </header>
+
     <div class="container">
         <section class="section">
             <h2>Sobre el Servicio</h2>
-            <p style="font-size: 20px;">Te ofrecemos planes de entrenamiento y nutrición completamente personalizados, diseñados para ayudarte a alcanzar tus objetivos de forma eficaz y segura. Ya sea que busques perder peso, ganar músculo o mejorar tu salud, tenemos el plan perfecto para ti.</p>
+            <p style="font-size: 20px; color: #666;">Ofrecemos planes personalizados de entrenamiento y nutrición diseñados para ayudarte a alcanzar tus objetivos de forma eficiente, segura y rápida. Ya sea para perder peso, ganar músculo o mejorar tu bienestar general, tenemos un plan adaptado para ti.</p>
         </section>
+
         <section class="section">
             <h2>Planes Disponibles</h2>
             <div class="plans">
@@ -160,8 +196,9 @@
                         ✔ Dieta equilibrada estándar <br>
                         ✔ Soporte por correo electrónico
                     </div>
-                    <a href="https://www.paypal.com/checkoutnow?token=PAYMENT_LINK_HERE" class="btn">Elegir Plan</a> <!-- Enlace de PayPal -->
+                    <a href="https://www.paypal.com/checkoutnow?token=PAYMENT_LINK_HERE" class="btn">Elegir Plan</a>
                 </div>
+
                 <div class="plan-card">
                     <div class="plan-title">Plan Intermedio</div>
                     <div class="plan-price">5€</div>
@@ -171,24 +208,26 @@
                         ✔ Seguimiento cada 15 días <br>
                         ✔ Consejos de suplementación
                     </div>
-                    <a href="https://www.paypal.com/checkoutnow?token=PAYMENT_LINK_HERE" class="btn">Elegir Plan</a> <!-- Enlace de PayPal -->
+                    <a href="https://www.paypal.com/checkoutnow?token=PAYMENT_LINK_HERE" class="btn">Elegir Plan</a>
                 </div>
+
                 <div class="plan-card">
                     <div class="plan-title">Plan Premium</div>
                     <div class="plan-price">10€</div>
                     <div class="plan-details">
-                        ✔ Entrenamiento personalizado y adaptado <br>
-                        ✔ Dieta completamente ajustada <br>
+                        ✔ Entrenamiento completamente personalizado <br>
+                        ✔ Dieta 100% ajustada a tus necesidades <br>
                         ✔ Seguimiento semanal <br>
                         ✔ Consultas ilimitadas <br>
                         ✔ Plan de suplementación avanzado
                     </div>
-                    <a href="https://www.paypal.com/checkoutnow?token=PAYMENT_LINK_HERE" class="btn">Elegir Plan</a> <!-- Enlace de PayPal -->
+                    <a href="https://www.paypal.com/checkoutnow?token=PAYMENT_LINK_HERE" class="btn">Elegir Plan</a>
                 </div>
             </div>
         </section>
+
         <section class="section" id="contacto">
-            <h2>Contacta para Personalizar tu Plan</h2>
+            <h2>Personaliza tu Plan</h2>
             <form action="https://formspree.io/f/mldjdewa" method="POST">
                 <input type="text" name="nombre" placeholder="Tu Nombre" required>
                 <input type="email" name="email" placeholder="Tu Email" required>
