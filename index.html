@@ -1,235 +1,382 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Planes de Entrenamiento y Dietas Personalizadas</title>
     <style>
-        body {
-            font-family: 'Poppins', sans-serif;
+        /* Estilos Globales */
+        * {
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            background-color: #f9f9f9;
             color: #333;
-            text-align: center;
+            line-height: 1.6;
         }
 
-        .container {
-            width: 90%;
-            margin: auto;
-            padding: 20px;
+        h1, h2, h3 {
+            font-weight: 600;
         }
 
-        header {
-            background: linear-gradient(90deg, #ff4c8d, #ff7bcb);
+        /* Barra de navegación */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: #ff6f61;
+            padding: 10px 20px;
+            z-index: 1000;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: space-around;
+            list-style: none;
+        }
+
+        nav ul li {
+            font-size: 18px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
             color: white;
-            padding: 20px 0;
-            font-size: 28px;
-            font-weight: bold;
+            padding: 10px;
+            transition: background 0.3s ease;
+            border-radius: 5px;
+        }
+
+        nav ul li a:hover {
+            background: #e2407e;
+        }
+
+        /* Header */
+        header {
+            background: linear-gradient(90deg, #ff4c97, #ff6f61, #ff8c00);
+            padding: 120px 0;
+            text-align: center;
+            color: white;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
+            margin-top: 60px;
+        }
+
+        header h1 {
+            font-size: 48px;
+            color: #fff;
+            letter-spacing: 1px;
             text-transform: uppercase;
         }
 
-        .section {
-            background: white;
-            margin: 20px 0;
-            padding: 40px;
-            border-radius: 15px;
-            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
-            animation: fadeIn 1s ease-in-out;
+        /* Container Principal */
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: auto;
+            padding-top: 60px;
         }
 
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(-10px);
-            }
+        /* Secciones */
+        .section {
+            background-color: #ffffff;
+            margin-bottom: 60px; /* Se agrega más separación entre las secciones */
+            border-radius: 20px;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+            padding: 60px 40px;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
 
-            to {
+        .section:hover {
+            transform: scale(1.02);
+        }
+
+        /* Títulos de Sección */
+        .section h2 {
+            font-size: 36px;
+            color: #333;
+            margin-bottom: 30px;
+        }
+
+        .section p {
+            font-size: 18px;
+            color: #666;
+            line-height: 1.8;
+        }
+
+        /* Planes de Entrenamiento */
+        .plans {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 40px;
+            margin-top: 20px;
+        }
+
+        .plan-card {
+            background-color: #ffffff;
+            border-radius: 20px;
+            padding: 30px;
+            text-align: center;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .plan-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+        }
+
+        .plan-title {
+            font-size: 28px;
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
+
+        .plan-price {
+            font-size: 32px;
+            color: #ff4c97;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
+        .plan-details {
+            font-size: 18px;
+            color: #666;
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+
+        .btn {
+            padding: 16px 32px;
+            background-color: #ff4c97;
+            color: #fff;
+            font-size: 18px;
+            border-radius: 50px;
+            text-decoration: none;
+            letter-spacing: 1px;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #e2407e;
+            transform: scale(1.05);
+        }
+
+        /* Formulario de Contacto */
+        #contacto {
+            background-color: #ffffff;
+            padding: 60px 40px;
+            border-radius: 20px;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+            margin-top: 60px; /* Se ha separado más la sección de contacto */
+        }
+
+        #contacto h2 {
+            font-size: 36px;
+            color: #333;
+            margin-bottom: 30px;
+        }
+
+        #contacto form {
+            display: grid;
+            gap: 20px;
+            justify-items: center;
+        }
+
+        #contacto input, #contacto select, #contacto textarea {
+            width: 100%;
+            max-width: 500px;
+            padding: 15px;
+            font-size: 18px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            transition: border-color 0.3s ease;
+        }
+
+        #contacto input:focus, #contacto select:focus, #contacto textarea:focus {
+            border-color: #ff4c97;
+            outline: none;
+        }
+
+        #contacto button {
+            padding: 15px 40px;
+            background-color: #ff4c97;
+            color: white;
+            font-size: 20px;
+            border-radius: 50px;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        #contacto button:hover {
+            background-color: #e2407e;
+            transform: scale(1.05);
+        }
+
+        /* Nuevos colores y detalles */
+        .highlight {
+            color: #ff6f61;
+        }
+
+        .info-bg {
+            background-color: #ffffff; /* Fondo blanco detrás de la sección de la dieta */
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Animación de entrada */
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            100% {
                 opacity: 1;
                 transform: translateY(0);
             }
         }
 
-        .btn {
-            display: inline-block;
-            padding: 12px 24px;
-            margin: 15px;
-            background: #ff4c8d;
-            color: white;
-            text-decoration: none;
-            border-radius: 8px;
-            font-size: 20px;
-            transition: background 0.3s;
+        .animate {
+            animation: fadeIn 1s ease-out;
         }
 
-        .btn:hover {
-            background: #e0477d;
-        }
-
-        .plans {
+        /* Estilo de estadísticas */
+        .stats {
             display: flex;
-            justify-content: center;
-            gap: 20px;
+            justify-content: space-evenly;
+            gap: 30px;
+            margin-top: 40px;
             flex-wrap: wrap;
         }
 
-        .plan-card {
-            background: #fff;
-            border-radius: 15px;
-            padding: 20px;
-            width: 300px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s;
-            margin-top: 20px;
-        }
-
-        .plan-card:hover {
-            transform: scale(1.05);
-        }
-
-        .plan-title {
-            font-size: 22px;
-            font-weight: bold;
-            margin-bottom: 10px;
-        }
-
-        .plan-price {
-            font-size: 20px;
-            color: #ff4c8d;
-            margin-bottom: 15px;
-        }
-
-        .plan-details {
-            font-size: 16px;
-            line-height: 1.6;
-        }
-
-        form input,
-        form select,
-        form textarea {
-            width: 100%;
-            padding: 12px;
-            margin: 10px 0;
-            border-radius: 8px;
-            border: 1px solid #ddd;
-        }
-
-        form button {
-            padding: 12px 24px;
-            background: #ff4c8d;
+        .stat-card {
+            background-color: #ff6f61;
             color: white;
-            border-radius: 8px;
-            font-size: 18px;
-            cursor: pointer;
-        }
-
-        form button:hover {
-            background: #e0477d;
-        }
-
-        .important-info {
-            background: #ff7bcb;
-            color: white;
-            padding: 20px;
+            padding: 40px 30px;
+            text-align: center;
             border-radius: 10px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+            width: 250px;
+            height: 200px;
+            transition: transform 0.3s;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
         }
 
-        .important-info h3 {
-            margin-top: 0;
+        .stat-card:hover {
+            transform: translateY(-10px);
         }
 
-        .important-info p {
-            font-size: 18px;
+        .stat-title {
+            font-size: 24px;
+            font-weight: 600;
         }
 
-        /* Estilo del menú de navegación */
-        nav {
-            position: absolute;
-            top: 20px;
-            right: 20px;
-            z-index: 1000;
+        .stat-number {
+            font-size: 32px;
+            font-weight: bold;
+            margin-top: 10px;
         }
 
-        nav a {
-            font-size: 18px;
-            color: white;
-            margin: 10px;
-            text-decoration: none;
-            background-color: #ff4c8d;
-            padding: 12px 20px;
-            border-radius: 5px;
-        }
+        /* Responsive para pantallas pequeñas */
+        @media (max-width: 768px) {
+            .plans {
+                grid-template-columns: 1fr;
+            }
 
-        nav a:hover {
-            background-color: #e0477d;
+            .stats {
+                flex-direction: column;
+                align-items: center;
+            }
         }
-
     </style>
 </head>
-
 <body>
-    <!-- Menú de Navegación -->
+    <!-- Barra de Navegación -->
     <nav>
-        <a href="#sobre">Sobre el Servicio</a>
-        <a href="#planes">Planes Disponibles</a>
-        <a href="#contacto">Contacto</a>
+        <ul>
+            <li><a href="#header">Inicio</a></li>
+            <li><a href="#planes">Planes</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+        </ul>
     </nav>
 
-    <header>
-        Planes de Entrenamiento y Dietas Personalizadas
+    <header id="header">
+        <h1>Planes de Entrenamiento y Dietas Personalizadas</h1>
     </header>
 
     <div class="container">
-        <section class="section" id="sobre">
-            <h2>Sobre el Servicio</h2>
-            <p>Ofrecemos planes de entrenamiento y nutrición personalizados, diseñados para ayudarte a alcanzar tus objetivos de forma eficiente y segura. El fitness es esencial para mantener una vida saludable, fortalecer tu cuerpo y mejorar tu bienestar general. Nuestros planes están pensados para adaptarse a tus necesidades, ayudándote a perder peso, aumentar masa muscular o mejorar tu resistencia.</p>
-            <p>Además, una buena dieta es clave para maximizar los resultados del ejercicio. No solo se trata de perder peso, sino de nutrir tu cuerpo con lo que necesita para rendir al máximo.</p>
+        <!-- Sección sobre el servicio -->
+        <section class="section animate">
+            <h2>¿Qué es el Fitness y el Ejercicio?</h2>
+            <p>El fitness se refiere a un estado óptimo de salud y bienestar físico. Se consigue a través de una combinación de ejercicio regular, nutrición adecuada y descanso. El ejercicio físico no solo ayuda a mejorar la fuerza y resistencia del cuerpo, sino que también juega un papel crucial en la salud mental, reduciendo el estrés y mejorando el estado de ánimo. Nuestro enfoque está diseñado para ayudarte a alcanzar un estilo de vida saludable y equilibrado.</p>
         </section>
 
-        <section class="section" id="planes">
+        <!-- Sección sobre la Dieta y Nutrición -->
+        <section class="section animate info-bg">
+            <h2>La Importancia de una Dieta Equilibrada</h2>
+            <p>Una buena dieta es esencial para mantener una salud óptima y apoyar tu progreso en el entrenamiento. La alimentación adecuada mejora el rendimiento, acelera la recuperación muscular y ayuda a reducir el riesgo de enfermedades. Al seguir un plan de dieta equilibrada, puedes obtener más energía, perder peso de forma saludable o ganar músculo, dependiendo de tus objetivos.</p>
+        </section>
+
+        <!-- Planes Disponibles -->
+        <section class="section animate" id="planes">
             <h2>Planes Disponibles</h2>
             <div class="plans">
+                <!-- Plan Básico -->
                 <div class="plan-card">
                     <div class="plan-title">Plan Básico</div>
-                    <div class="plan-price">1€ / mes</div>
-                    <div class="plan-details">
-                        ✔ Rutina de entrenamiento genérica <br>
-                        ✔ Dieta equilibrada estándar <br>
-                        ✔ Soporte por correo electrónico
-                    </div>
-                    <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=tu_correo_de_paypal&item_name=Plan+Basico&amount=1.00&currency_code=EUR" class="btn" target="_blank">Elegir Plan</a>
+                    <div class="plan-price">1€</div>
+                    <div class="plan-details">✔ Rutina de entrenamiento genérica <br>✔ Dieta equilibrada estándar <br>✔ Soporte por correo electrónico</div>
+                    <a href="https://www.paypal.com/checkoutnow?token=PAYMENT_LINK_HERE" class="btn">Elegir Plan</a>
                 </div>
+
+                <!-- Plan Intermedio -->
                 <div class="plan-card">
                     <div class="plan-title">Plan Intermedio</div>
-                    <div class="plan-price">5€ / mes</div>
-                    <div class="plan-details">
-                        ✔ Rutina de entrenamiento personalizada <br>
-                        ✔ Dieta adaptada a tu metabolismo <br>
-                        ✔ Seguimiento cada 15 días <br>
-                        ✔ Consejos de suplementación
-                    </div>
-                    <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=tu_correo_de_paypal&item_name=Plan+Intermedio&amount=5.00&currency_code=EUR" class="btn" target="_blank">Elegir Plan</a>
+                    <div class="plan-price">5€</div>
+                    <div class="plan-details">✔ Rutina de entrenamiento personalizada <br>✔ Dieta adaptada a tu metabolismo <br>✔ Seguimiento cada 15 días <br>✔ Consejos de suplementación</div>
+                    <a href="https://www.paypal.com/checkoutnow?token=PAYMENT_LINK_HERE" class="btn">Elegir Plan</a>
                 </div>
+
+                <!-- Plan Premium -->
                 <div class="plan-card">
                     <div class="plan-title">Plan Premium</div>
-                    <div class="plan-price">10€ / mes</div>
-                    <div class="plan-details">
-                        ✔ Entrenamiento personalizado y adaptado <br>
-                        ✔ Dieta completamente ajustada <br>
-                        ✔ Seguimiento semanal <br>
-                        ✔ Consultas ilimitadas <br>
-                        ✔ Plan de suplementación avanzado
-                    </div>
-                    <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=tu_correo_de_paypal&item_name=Plan+Premium&amount=10.00&currency_code=EUR" class="btn" target="_blank">Elegir Plan</a>
+                    <div class="plan-price">10€</div>
+                    <div class="plan-details">✔ Entrenamiento totalmente personalizado <br>✔ Dieta ajustada completamente <br>✔ Seguimiento semanal <br>✔ Consultas ilimitadas <br>✔ Plan avanzado de suplementación</div>
+                    <a href="https://www.paypal.com/checkoutnow?token=PAYMENT_LINK_HERE" class="btn">Elegir Plan</a>
                 </div>
             </div>
         </section>
 
-        <section class="section" id="contacto">
-            <h2>Contacta para Personalizar tu Plan</h2>
-            <p>Si tienes alguna duda o quieres personalizar aún más tu plan de entrenamiento, no dudes en contactarnos. ¡Estamos aquí para ayudarte a lograr tus objetivos!</p>
+        <!-- Estadísticas -->
+        <section class="stats animate">
+            <div class="stat-card">
+                <div class="stat-title">Clientes Satisfechos</div>
+                <div class="stat-number">1000+</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-title">Entrenamientos Realizados</div>
+                <div class="stat-number">20,000+</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-title">Progresos Observados</div>
+                <div class="stat-number">99%</div>
+            </div>
+        </section>
 
+        <!-- Formulario de Contacto -->
+        <section id="contacto" class="section animate">
+            <h2>¡Contáctanos para Personalizar tu Plan!</h2>
             <form action="https://formspree.io/f/mldjdewa" method="POST">
                 <input type="text" name="nombre" placeholder="Tu Nombre" required>
                 <input type="email" name="email" placeholder="Tu Email" required>
@@ -240,39 +387,9 @@
                     <option value="Premium">Plan Premium - 10€</option>
                 </select>
                 <textarea name="objetivos" placeholder="Cuéntame tus objetivos..." rows="4"></textarea>
-                <button type="submit" class="btn">Enviar Solicitud</button>
+                <button type="submit">Enviar Solicitud</button>
             </form>
         </section>
-
-        <section class="section important-info">
-            <h3>Importancia de una Dieta Saludable</h3>
-            <p>Una buena dieta es esencial no solo para perder peso, sino para mejorar la salud general del cuerpo. Comer de forma balanceada puede prevenir enfermedades, mejorar la digestión, aumentar la energía y contribuir a un mejor rendimiento durante los entrenamientos. Nuestro equipo de nutricionistas trabaja para crear planes de alimentación adaptados a tus necesidades específicas, asegurando que obtengas los mejores resultados posibles.</p>
-        </section>
-
-        <section class="section" id="clientes">
-            <h2>Clientes Satisfechos</h2>
-            <p>Estos son algunos de los testimonios de nuestros clientes que ya han experimentado los resultados con nuestros planes.</p>
-            <div class="testimonials">
-                <div class="testimonial-card">
-                    <p>"Gracias a este plan he perdido 10 kg en dos meses. Mi energía ha aumentado mucho y ahora me siento mucho mejor conmigo mismo."</p>
-                    <h4>- Juan P.</h4>
-                </div>
-                <div class="testimonial-card">
-                    <p>"El plan de entrenamiento y la dieta personalizada fueron claves para alcanzar mis objetivos. Estoy muy satisfecho."</p>
-                    <h4>- María G.</h4>
-                </div>
-                <div class="testimonial-card">
-                    <p>"El seguimiento semanal y la asesoría personalizada realmente marcaron la diferencia. Recomiendo totalmente este servicio."</p>
-                    <h4>- Luis M.</h4>
-                </div>
-            </div>
-        </section>
-
-        <footer>
-            <p>&copy; 2025 Planes de Entrenamiento y Dietas Personalizadas. Todos los derechos reservados.</p>
-        </footer>
-
     </div>
 </body>
-
 </html>
