@@ -216,20 +216,26 @@
         /* Estilo de estadísticas */
         .stats {
             display: flex;
-            justify-content: center;
+            justify-content: space-evenly;
             gap: 30px;
             margin-top: 40px;
+            flex-wrap: wrap;
         }
 
         .stat-card {
             background-color: #ff6f61;
             color: white;
-            padding: 30px;
+            padding: 40px 30px;
             text-align: center;
             border-radius: 10px;
             box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
-            width: 150px;
+            width: 250px;
+            height: 200px;
             transition: transform 0.3s;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
         }
 
         .stat-card:hover {
@@ -244,6 +250,19 @@
         .stat-number {
             font-size: 32px;
             font-weight: bold;
+            margin-top: 10px;
+        }
+
+        /* Responsive para pantallas pequeñas */
+        @media (max-width: 768px) {
+            .plans {
+                grid-template-columns: 1fr;
+            }
+
+            .stats {
+                flex-direction: column;
+                align-items: center;
+            }
         }
     </style>
 </head>
@@ -288,10 +307,10 @@
                     <div class="plan-title">Plan Intermedio</div>
                     <div class="plan-price">5€</div>
                     <div class="plan-details">
-                        ✔ Rutina de entrenamiento personalizada según tus metas<br>
-                        ✔ Dieta adaptada a tu metabolismo y objetivos<br>
-                        ✔ Seguimiento cada 15 días para ajustar y mejorar<br>
-                        ✔ Consejos de suplementación según tus necesidades
+                        ✔ Rutina de entrenamiento personalizada según tus objetivos<br>
+                        ✔ Dieta adaptada a tu metabolismo y necesidades nutricionales<br>
+                        ✔ Seguimiento quincenal para asegurar el progreso<br>
+                        ✔ Consejos de suplementación
                     </div>
                     <a href="https://www.paypal.com/checkoutnow?token=PAYMENT_LINK_HERE" class="btn">Elegir Plan</a>
                 </div>
@@ -301,26 +320,25 @@
                     <div class="plan-title">Plan Premium</div>
                     <div class="plan-price">10€</div>
                     <div class="plan-details">
-                        ✔ Entrenamiento completamente personalizado y ajustado a tus necesidades<br>
-                        ✔ Dieta 100% ajustada a tus necesidades y preferencias<br>
-                        ✔ Seguimiento semanal para optimizar resultados<br>
-                        ✔ Consultas ilimitadas y acceso a asesoramiento continuo<br>
-                        ✔ Plan de suplementación avanzado para maximizar tu rendimiento
+                        ✔ Entrenamiento totalmente personalizado con ajustes semanales<br>
+                        ✔ Dieta completamente ajustada a tus requerimientos específicos<br>
+                        ✔ Seguimiento semanal para asegurar resultados óptimos<br>
+                        ✔ Consultas ilimitadas y plan avanzado de suplementación
                     </div>
                     <a href="https://www.paypal.com/checkoutnow?token=PAYMENT_LINK_HERE" class="btn">Elegir Plan</a>
                 </div>
             </div>
         </section>
 
-        <!-- Sección de estadísticas -->
-        <section class="stats">
+        <!-- Estadísticas -->
+        <section class="stats animate">
             <div class="stat-card">
                 <div class="stat-title">Clientes Satisfechos</div>
-                <div class="stat-number">2500+</div>
+                <div class="stat-number">500+</div>
             </div>
             <div class="stat-card">
                 <div class="stat-title">Entrenamientos Realizados</div>
-                <div class="stat-number">10000+</div>
+                <div class="stat-number">10,000+</div>
             </div>
             <div class="stat-card">
                 <div class="stat-title">Progresos Observados</div>
