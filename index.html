@@ -23,14 +23,48 @@
             font-weight: 600;
         }
 
+        /* Barra de navegación */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: #ff6f61;
+            padding: 10px 20px;
+            z-index: 1000;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: space-around;
+            list-style: none;
+        }
+
+        nav ul li {
+            font-size: 18px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            padding: 10px;
+            transition: background 0.3s ease;
+            border-radius: 5px;
+        }
+
+        nav ul li a:hover {
+            background: #e2407e;
+        }
+
         /* Header */
         header {
             background: linear-gradient(90deg, #ff4c97, #ff6f61, #ff8c00);
-            padding: 80px 0;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            padding: 120px 0;
             text-align: center;
             color: white;
             text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
+            margin-top: 60px;
         }
 
         header h1 {
@@ -140,6 +174,7 @@
             padding: 60px 40px;
             border-radius: 20px;
             box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+            margin-top: 60px; /* Se ha separado más la sección de contacto */
         }
 
         #contacto h2 {
@@ -267,7 +302,16 @@
     </style>
 </head>
 <body>
-    <header>
+    <!-- Barra de Navegación -->
+    <nav>
+        <ul>
+            <li><a href="#header">Inicio</a></li>
+            <li><a href="#planes">Planes</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+        </ul>
+    </nav>
+
+    <header id="header">
         <h1>Planes de Entrenamiento y Dietas Personalizadas</h1>
     </header>
 
@@ -275,30 +319,24 @@
         <!-- Sección sobre el servicio -->
         <section class="section animate">
             <h2>¿Qué es el Fitness y el Ejercicio?</h2>
-            <p>El fitness se refiere a un estado óptimo de salud y bienestar físico. Se consigue a través de una combinación de ejercicio regular, nutrición adecuada y descanso. El ejercicio no solo mejora tu aspecto físico, sino que también fortalece el sistema cardiovascular, aumenta la resistencia y mejora la flexibilidad.</p>
-            <p>El ejercicio regular es vital para prevenir enfermedades crónicas como la diabetes, enfermedades del corazón y problemas de salud mental. Las actividades físicas también liberan endorfinas, lo que ayuda a reducir el estrés y mejorar el estado de ánimo. Incorporar una rutina de entrenamiento personalizada es clave para lograr un cuerpo sano y una mente tranquila.</p>
+            <p>El fitness se refiere a un estado óptimo de salud y bienestar físico. Se consigue a través de una combinación de ejercicio regular, nutrición adecuada y descanso...</p>
         </section>
 
         <!-- Sección sobre la Dieta y Nutrición -->
         <section class="section animate info-bg">
             <h2>La Importancia de una Dieta Equilibrada</h2>
-            <p>Una buena dieta es esencial para mantener una salud óptima y apoyar tu progreso en el entrenamiento. Comer los alimentos adecuados no solo te proporciona la energía necesaria para el ejercicio, sino que también ayuda a la recuperación muscular y mejora tu rendimiento general. Una dieta equilibrada debe incluir una variedad de alimentos saludables como frutas, verduras, proteínas magras, y carbohidratos complejos.</p>
-            <p>Además, la hidratación es clave para mantener tu cuerpo funcionando correctamente. Si no estás bien hidratado, tu rendimiento se verá afectado y podrías experimentar fatiga y calambres. La clave es tener una dieta adaptada a tus necesidades individuales, y es por eso que ofrecemos planes de dieta personalizados que se ajustan a tus metas y metabolismo.</p>
+            <p>Una buena dieta es esencial para mantener una salud óptima y apoyar tu progreso en el entrenamiento...</p>
         </section>
 
         <!-- Planes Disponibles -->
-        <section class="section animate">
+        <section class="section animate" id="planes">
             <h2>Planes Disponibles</h2>
             <div class="plans">
                 <!-- Plan Básico -->
                 <div class="plan-card">
                     <div class="plan-title">Plan Básico</div>
                     <div class="plan-price">1€</div>
-                    <div class="plan-details">
-                        ✔ Rutina de entrenamiento genérica <br>
-                        ✔ Dieta equilibrada estándar <br>
-                        ✔ Soporte por correo electrónico
-                    </div>
+                    <div class="plan-details">✔ Rutina de entrenamiento genérica <br>✔ Dieta equilibrada estándar <br>✔ Soporte por correo electrónico</div>
                     <a href="https://www.paypal.com/checkoutnow?token=PAYMENT_LINK_HERE" class="btn">Elegir Plan</a>
                 </div>
 
@@ -306,12 +344,7 @@
                 <div class="plan-card">
                     <div class="plan-title">Plan Intermedio</div>
                     <div class="plan-price">5€</div>
-                    <div class="plan-details">
-                        ✔ Rutina de entrenamiento personalizada <br>
-                        ✔ Dieta adaptada a tu metabolismo <br>
-                        ✔ Seguimiento cada 15 días <br>
-                        ✔ Consejos de suplementación
-                    </div>
+                    <div class="plan-details">✔ Rutina de entrenamiento personalizada <br>✔ Dieta adaptada a tu metabolismo <br>✔ Seguimiento cada 15 días <br>✔ Consejos de suplementación</div>
                     <a href="https://www.paypal.com/checkoutnow?token=PAYMENT_LINK_HERE" class="btn">Elegir Plan</a>
                 </div>
 
@@ -319,13 +352,7 @@
                 <div class="plan-card">
                     <div class="plan-title">Plan Premium</div>
                     <div class="plan-price">10€</div>
-                    <div class="plan-details">
-                        ✔ Entrenamiento totalmente personalizado <br>
-                        ✔ Dieta ajustada completamente <br>
-                        ✔ Seguimiento semanal <br>
-                        ✔ Consultas ilimitadas <br>
-                        ✔ Plan avanzado de suplementación
-                    </div>
+                    <div class="plan-details">✔ Entrenamiento totalmente personalizado <br>✔ Dieta ajustada completamente <br>✔ Seguimiento semanal <br>✔ Consultas ilimitadas <br>✔ Plan avanzado de suplementación</div>
                     <a href="https://www.paypal.com/checkoutnow?token=PAYMENT_LINK_HERE" class="btn">Elegir Plan</a>
                 </div>
             </div>
