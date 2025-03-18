@@ -283,10 +283,10 @@
         <section class="section animate info-bg">
             <h2>La Importancia de una Dieta Equilibrada</h2>
             <p>Una buena dieta es esencial para mantener una salud óptima y apoyar tu progreso en el entrenamiento. Comer los alimentos adecuados no solo te proporciona la energía necesaria para el ejercicio, sino que también ayuda a la recuperación muscular y mejora tu rendimiento general. Una dieta equilibrada debe incluir una variedad de alimentos saludables como frutas, verduras, proteínas magras, y carbohidratos complejos.</p>
-            <p>Además, la hidratación es clave para mantener tu cuerpo funcionando correctamente. Si no estás bien hidratado, tu rendimiento se verá afectado y podrías experimentar fatiga y calambres. La clave es tener una dieta adaptada a tus necesidades específicas, la cual puede ajustarse en función de tus objetivos de fitness.</p>
+            <p>Además, la hidratación es clave para mantener tu cuerpo funcionando correctamente. Si no estás bien hidratado, tu rendimiento se verá afectado y podrías experimentar fatiga y calambres. La clave es tener una dieta adaptada a tus necesidades individuales, y es por eso que ofrecemos planes de dieta personalizados que se ajustan a tus metas y metabolismo.</p>
         </section>
 
-        <!-- Sección sobre planes disponibles -->
+        <!-- Planes Disponibles -->
         <section class="section animate">
             <h2>Planes Disponibles</h2>
             <div class="plans">
@@ -295,9 +295,9 @@
                     <div class="plan-title">Plan Básico</div>
                     <div class="plan-price">1€</div>
                     <div class="plan-details">
-                        ✔ Rutina de entrenamiento genérica adaptada a tu nivel<br>
-                        ✔ Dieta equilibrada estándar para una alimentación sana<br>
-                        ✔ Soporte por correo electrónico para dudas y consultas
+                        ✔ Rutina de entrenamiento genérica <br>
+                        ✔ Dieta equilibrada estándar <br>
+                        ✔ Soporte por correo electrónico
                     </div>
                     <a href="https://www.paypal.com/checkoutnow?token=PAYMENT_LINK_HERE" class="btn">Elegir Plan</a>
                 </div>
@@ -307,9 +307,9 @@
                     <div class="plan-title">Plan Intermedio</div>
                     <div class="plan-price">5€</div>
                     <div class="plan-details">
-                        ✔ Rutina de entrenamiento personalizada según tus objetivos<br>
-                        ✔ Dieta adaptada a tu metabolismo y necesidades nutricionales<br>
-                        ✔ Seguimiento quincenal para asegurar el progreso<br>
+                        ✔ Rutina de entrenamiento personalizada <br>
+                        ✔ Dieta adaptada a tu metabolismo <br>
+                        ✔ Seguimiento cada 15 días <br>
                         ✔ Consejos de suplementación
                     </div>
                     <a href="https://www.paypal.com/checkoutnow?token=PAYMENT_LINK_HERE" class="btn">Elegir Plan</a>
@@ -320,10 +320,11 @@
                     <div class="plan-title">Plan Premium</div>
                     <div class="plan-price">10€</div>
                     <div class="plan-details">
-                        ✔ Entrenamiento totalmente personalizado con ajustes semanales<br>
-                        ✔ Dieta completamente ajustada a tus requerimientos específicos<br>
-                        ✔ Seguimiento semanal para asegurar resultados óptimos<br>
-                        ✔ Consultas ilimitadas y plan avanzado de suplementación
+                        ✔ Entrenamiento totalmente personalizado <br>
+                        ✔ Dieta ajustada completamente <br>
+                        ✔ Seguimiento semanal <br>
+                        ✔ Consultas ilimitadas <br>
+                        ✔ Plan avanzado de suplementación
                     </div>
                     <a href="https://www.paypal.com/checkoutnow?token=PAYMENT_LINK_HERE" class="btn">Elegir Plan</a>
                 </div>
@@ -348,12 +349,18 @@
 
         <!-- Formulario de Contacto -->
         <section id="contacto" class="section animate">
-            <h2>¡Contáctanos para más Información!</h2>
-            <form>
-                <input type="text" placeholder="Tu Nombre" required>
-                <input type="email" placeholder="Tu Correo Electrónico" required>
-                <textarea placeholder="Escribe tu mensaje" required></textarea>
-                <button type="submit">Enviar</button>
+            <h2>¡Contáctanos para Personalizar tu Plan!</h2>
+            <form action="https://formspree.io/f/mldjdewa" method="POST">
+                <input type="text" name="nombre" placeholder="Tu Nombre" required>
+                <input type="email" name="email" placeholder="Tu Email" required>
+                <select name="plan" required>
+                    <option value="">Selecciona tu plan</option>
+                    <option value="Básico">Plan Básico - 1€</option>
+                    <option value="Intermedio">Plan Intermedio - 5€</option>
+                    <option value="Premium">Plan Premium - 10€</option>
+                </select>
+                <textarea name="objetivos" placeholder="Cuéntame tus objetivos..." rows="4"></textarea>
+                <button type="submit">Enviar Solicitud</button>
             </form>
         </section>
     </div>
