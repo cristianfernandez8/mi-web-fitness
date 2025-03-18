@@ -6,44 +6,82 @@
     <title>Planes de Entrenamiento y Dietas Personalizadas</title>
     <style>
         body {
-            font-family: 'Arial', sans-serif;
+            font-family: 'Poppins', sans-serif;
             margin: 0;
             padding: 0;
-            text-align: center;
             background-color: #f4f4f4;
             color: #333;
+            text-align: center;
         }
         .container {
-            width: 80%;
+            width: 90%;
             margin: auto;
             padding: 20px;
         }
         header {
-            background: #0073e6;
+            background: linear-gradient(90deg, #0073e6, #00aaff);
             color: white;
             padding: 20px 0;
-            font-size: 24px;
+            font-size: 28px;
             font-weight: bold;
+            text-transform: uppercase;
         }
         .section {
             background: white;
             margin: 20px 0;
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+            animation: fadeIn 1s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-10px); }
+            to { opacity: 1; transform: translateY(0); }
         }
         .btn {
             display: inline-block;
-            padding: 10px 20px;
-            margin: 10px;
+            padding: 12px 24px;
+            margin: 15px;
             background: #0073e6;
             color: white;
             text-decoration: none;
-            border-radius: 5px;
-            font-size: 18px;
+            border-radius: 8px;
+            font-size: 20px;
+            transition: background 0.3s;
         }
         .btn:hover {
             background: #005bb5;
+        }
+        .plans {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        .plan-card {
+            background: #fff;
+            border-radius: 15px;
+            padding: 20px;
+            width: 300px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+        .plan-card:hover {
+            transform: scale(1.05);
+        }
+        .plan-title {
+            font-size: 22px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        .plan-price {
+            font-size: 20px;
+            color: #0073e6;
+            margin-bottom: 15px;
+        }
+        .plan-details {
+            font-size: 16px;
+            line-height: 1.6;
         }
     </style>
 </head>
@@ -54,18 +92,49 @@
     <div class="container">
         <section class="section">
             <h2>Sobre el Servicio</h2>
-            <p>Ofrecemos planes personalizados de entrenamiento y nutrición según tus objetivos: pérdida de peso, ganancia muscular o bienestar general.</p>
+            <p>Ofrecemos planes de entrenamiento y nutrición personalizados, diseñados para ayudarte a alcanzar tus objetivos de forma eficiente y segura.</p>
         </section>
         <section class="section">
             <h2>Planes Disponibles</h2>
-            <p>Selecciona el plan que mejor se adapte a tus necesidades y recibe tu rutina y dieta personalizada.</p>
-            <a href="#contacto" class="btn">Plan Básico - 1€</a>
-            <a href="#contacto" class="btn">Plan Intermedio - 5€</a>
-            <a href="#contacto" class="btn">Plan Premium - 10€</a>
+            <div class="plans">
+                <div class="plan-card">
+                    <div class="plan-title">Plan Básico</div>
+                    <div class="plan-price">1€</div>
+                    <div class="plan-details">
+                        ✔ Rutina de entrenamiento genérica <br>
+                        ✔ Dieta equilibrada estándar <br>
+                        ✔ Soporte por correo electrónico
+                    </div>
+                    <a href="#contacto" class="btn">Elegir Plan</a>
+                </div>
+                <div class="plan-card">
+                    <div class="plan-title">Plan Intermedio</div>
+                    <div class="plan-price">5€</div>
+                    <div class="plan-details">
+                        ✔ Rutina de entrenamiento personalizada <br>
+                        ✔ Dieta adaptada a tu metabolismo <br>
+                        ✔ Seguimiento cada 15 días <br>
+                        ✔ Consejos de suplementación
+                    </div>
+                    <a href="#contacto" class="btn">Elegir Plan</a>
+                </div>
+                <div class="plan-card">
+                    <div class="plan-title">Plan Premium</div>
+                    <div class="plan-price">10€</div>
+                    <div class="plan-details">
+                        ✔ Entrenamiento personalizado y adaptado <br>
+                        ✔ Dieta completamente ajustada <br>
+                        ✔ Seguimiento semanal <br>
+                        ✔ Consultas ilimitadas <br>
+                        ✔ Plan de suplementación avanzado
+                    </div>
+                    <a href="#contacto" class="btn">Elegir Plan</a>
+                </div>
+            </div>
         </section>
         <section class="section" id="contacto">
             <h2>Contacta para Personalizar tu Plan</h2>
-            <form action="https://formspree.io/f/mldjdewa" method="POST" class="form">
+            <form action="https://formspree.io/f/mldjdewa" method="POST">
                 <input type="text" name="nombre" placeholder="Tu Nombre" required>
                 <input type="email" name="email" placeholder="Tu Email" required>
                 <select name="plan" required>
@@ -81,4 +150,3 @@
     </div>
 </body>
 </html>
-
