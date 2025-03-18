@@ -142,68 +142,78 @@
         .important-info p {
             font-size: 18px;
         }
+
+        /* Estilo del menú de navegación */
+        nav {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            z-index: 1000;
+        }
+
+        nav a {
+            font-size: 18px;
+            color: white;
+            margin: 10px;
+            text-decoration: none;
+            background-color: #ff4c8d;
+            padding: 12px 20px;
+            border-radius: 5px;
+        }
+
+        nav a:hover {
+            background-color: #e0477d;
+        }
+
     </style>
 </head>
 
 <body>
+    <!-- Menú de Navegación -->
+    <nav>
+        <a href="#sobre">Sobre el Servicio</a>
+        <a href="#planes">Planes Disponibles</a>
+        <a href="#contacto">Contacto</a>
+    </nav>
+
     <header>
         Planes de Entrenamiento y Dietas Personalizadas
     </header>
+
     <div class="container">
-        <section class="section">
+        <section class="section" id="sobre">
             <h2>Sobre el Servicio</h2>
-            <p>Ofrecemos planes de entrenamiento y nutrición personalizados, diseñados para ayudarte a alcanzar tus objetivos de forma eficiente y segura.</p>
+            <p>Ofrecemos planes de entrenamiento y nutrición personalizados, diseñados para ayudarte a alcanzar tus objetivos de forma eficiente y segura. El fitness es esencial para mantener una vida saludable, fortalecer tu cuerpo y mejorar tu bienestar general. Nuestros planes están pensados para adaptarse a tus necesidades, ayudándote a perder peso, aumentar masa muscular o mejorar tu resistencia.</p>
+            <p>Además, una buena dieta es clave para maximizar los resultados del ejercicio. No solo se trata de perder peso, sino de nutrir tu cuerpo con lo que necesita para rendir al máximo.</p>
         </section>
-        
-        <section class="section">
+
+        <section class="section" id="planes">
             <h2>Planes Disponibles</h2>
             <div class="plans">
                 <div class="plan-card">
                     <div class="plan-title">Plan Básico</div>
-                    <div class="plan-price">1€</div>
+                    <div class="plan-price">1€ / mes</div>
                     <div class="plan-details">
                         ✔ Rutina de entrenamiento genérica <br>
                         ✔ Dieta equilibrada estándar <br>
                         ✔ Soporte por correo electrónico
                     </div>
-                    <!-- Redirige a PayPal -->
-                    <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
-                        <input type="hidden" name="cmd" value="_xclick">
-                        <input type="hidden" name="business" value="tu-correo@paypal.com">
-                        <input type="hidden" name="item_name" value="Plan Básico">
-                        <input type="hidden" name="amount" value="1.00">
-                        <input type="hidden" name="currency_code" value="EUR">
-                        <input type="hidden" name="return" value="http://tusitio.com/gracias.html">
-                        <input type="hidden" name="cancel_return" value="http://tusitio.com/error.html">
-                        <button type="submit" class="btn">Elegir Plan</button>
-                    </form>
+                    <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=tu_correo_de_paypal&item_name=Plan+Basico&amount=1.00&currency_code=EUR" class="btn" target="_blank">Elegir Plan</a>
                 </div>
-
                 <div class="plan-card">
                     <div class="plan-title">Plan Intermedio</div>
-                    <div class="plan-price">5€</div>
+                    <div class="plan-price">5€ / mes</div>
                     <div class="plan-details">
                         ✔ Rutina de entrenamiento personalizada <br>
                         ✔ Dieta adaptada a tu metabolismo <br>
                         ✔ Seguimiento cada 15 días <br>
                         ✔ Consejos de suplementación
                     </div>
-                    <!-- Redirige a PayPal -->
-                    <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
-                        <input type="hidden" name="cmd" value="_xclick">
-                        <input type="hidden" name="business" value="tu-correo@paypal.com">
-                        <input type="hidden" name="item_name" value="Plan Intermedio">
-                        <input type="hidden" name="amount" value="5.00">
-                        <input type="hidden" name="currency_code" value="EUR">
-                        <input type="hidden" name="return" value="http://tusitio.com/gracias.html">
-                        <input type="hidden" name="cancel_return" value="http://tusitio.com/error.html">
-                        <button type="submit" class="btn">Elegir Plan</button>
-                    </form>
+                    <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=tu_correo_de_paypal&item_name=Plan+Intermedio&amount=5.00&currency_code=EUR" class="btn" target="_blank">Elegir Plan</a>
                 </div>
-
                 <div class="plan-card">
                     <div class="plan-title">Plan Premium</div>
-                    <div class="plan-price">10€</div>
+                    <div class="plan-price">10€ / mes</div>
                     <div class="plan-details">
                         ✔ Entrenamiento personalizado y adaptado <br>
                         ✔ Dieta completamente ajustada <br>
@@ -211,23 +221,15 @@
                         ✔ Consultas ilimitadas <br>
                         ✔ Plan de suplementación avanzado
                     </div>
-                    <!-- Redirige a PayPal -->
-                    <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
-                        <input type="hidden" name="cmd" value="_xclick">
-                        <input type="hidden" name="business" value="tu-correo@paypal.com">
-                        <input type="hidden" name="item_name" value="Plan Premium">
-                        <input type="hidden" name="amount" value="10.00">
-                        <input type="hidden" name="currency_code" value="EUR">
-                        <input type="hidden" name="return" value="http://tusitio.com/gracias.html">
-                        <input type="hidden" name="cancel_return" value="http://tusitio.com/error.html">
-                        <button type="submit" class="btn">Elegir Plan</button>
-                    </form>
+                    <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=tu_correo_de_paypal&item_name=Plan+Premium&amount=10.00&currency_code=EUR" class="btn" target="_blank">Elegir Plan</a>
                 </div>
             </div>
         </section>
 
         <section class="section" id="contacto">
             <h2>Contacta para Personalizar tu Plan</h2>
+            <p>Si tienes alguna duda o quieres personalizar aún más tu plan de entrenamiento, no dudes en contactarnos. ¡Estamos aquí para ayudarte a lograr tus objetivos!</p>
+
             <form action="https://formspree.io/f/mldjdewa" method="POST">
                 <input type="text" name="nombre" placeholder="Tu Nombre" required>
                 <input type="email" name="email" placeholder="Tu Email" required>
@@ -242,10 +244,34 @@
             </form>
         </section>
 
-        <section class="important-info">
-            <h3>¿Por qué es importante una buena dieta y ejercicio?</h3>
-            <p>El ejercicio físico es clave para mantener un cuerpo saludable, prevenir enfermedades y aumentar la energía. Combinado con una dieta balanceada, los resultados son aún más efectivos. Nuestros planes están diseñados para adaptar el entrenamiento y la nutrición a tus necesidades y objetivos, ayudándote a mejorar tu bienestar físico y mental.</p>
+        <section class="section important-info">
+            <h3>Importancia de una Dieta Saludable</h3>
+            <p>Una buena dieta es esencial no solo para perder peso, sino para mejorar la salud general del cuerpo. Comer de forma balanceada puede prevenir enfermedades, mejorar la digestión, aumentar la energía y contribuir a un mejor rendimiento durante los entrenamientos. Nuestro equipo de nutricionistas trabaja para crear planes de alimentación adaptados a tus necesidades específicas, asegurando que obtengas los mejores resultados posibles.</p>
         </section>
+
+        <section class="section" id="clientes">
+            <h2>Clientes Satisfechos</h2>
+            <p>Estos son algunos de los testimonios de nuestros clientes que ya han experimentado los resultados con nuestros planes.</p>
+            <div class="testimonials">
+                <div class="testimonial-card">
+                    <p>"Gracias a este plan he perdido 10 kg en dos meses. Mi energía ha aumentado mucho y ahora me siento mucho mejor conmigo mismo."</p>
+                    <h4>- Juan P.</h4>
+                </div>
+                <div class="testimonial-card">
+                    <p>"El plan de entrenamiento y la dieta personalizada fueron claves para alcanzar mis objetivos. Estoy muy satisfecho."</p>
+                    <h4>- María G.</h4>
+                </div>
+                <div class="testimonial-card">
+                    <p>"El seguimiento semanal y la asesoría personalizada realmente marcaron la diferencia. Recomiendo totalmente este servicio."</p>
+                    <h4>- Luis M.</h4>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <p>&copy; 2025 Planes de Entrenamiento y Dietas Personalizadas. Todos los derechos reservados.</p>
+        </footer>
+
     </div>
 </body>
 
